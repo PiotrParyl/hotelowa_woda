@@ -1,3 +1,4 @@
+from token import token
 from dataclasses import dataclass
 import discord
 from discord.ext import commands
@@ -74,7 +75,7 @@ def kurwa_mac():
 
 
 
-token = "MTAyMTc4Mzc0NzEwMTc0MTEwNw.GVNN0E.pj6QMVse5LBb-xEQ3YIu4phBaQrgqS8qkAFF10"
+token_chuj = token 
 intents = discord.Intents.all()
 
 client = commands.Bot(command_prefix='!',intents=intents)
@@ -91,4 +92,4 @@ async def kurwa(ctx):
     channel = client.get_channel(1017555311365722246)
     await channel.send('test')
 
-client.run(token)
+client.run(token_chuj)

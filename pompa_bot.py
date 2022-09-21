@@ -6,10 +6,18 @@ from datetime import datetime
 import db_linux
 from sqlalchemy.orm import sessionmaker
 
+import mysql.connector
+
 
 #========================= db.connection #=========================
-Session = sessionmaker(bind=db_linux.engine)
-session = Session()
+db = mysql.connector.connect(
+    host="127.0.0.1",
+    user="maczo420all",
+    passwd="Pomidor13",
+    database="metryka",
+)
+
+mycursor = db.cursor()
 
 
 
@@ -37,8 +45,7 @@ while True:
         e = datetime.now()
         #========================= dodawanie do bazy danych #===============$
         wynik = float(wynik)
-        new_data = db_linux.pump_date(wynik)
-        session.add(new_data)
-        session.commit()
+        mycursor.execute(f"INSERT INTO pompa (value) VALUES({wynik})")
+        db.commit()
         sleep(300)      
 

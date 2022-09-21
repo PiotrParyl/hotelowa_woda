@@ -1,4 +1,5 @@
-from token import token
+import os
+from dotenv import load_dotenv
 from dataclasses import dataclass
 import discord
 from discord.ext import commands
@@ -6,6 +7,8 @@ from discord.ext.commands import bot
 import time
 import mysql.connector 
 from datetime import datetime
+
+load_dotenv()
 
 
 
@@ -75,7 +78,7 @@ def kurwa_mac():
 
 
 
-token_chuj = token 
+token_chuj = os.getenv('token') 
 intents = discord.Intents.all()
 
 client = commands.Bot(command_prefix='!',intents=intents)

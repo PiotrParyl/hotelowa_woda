@@ -82,7 +82,7 @@ client = commands.Bot(command_prefix='!',intents=intents)
 @client.command(pass_context=True)
 async def r(ctx):
     channel = client.get_channel(1021783221475754057)
-    await channel.send(f"=== Zużycie Wody === \n Dzisiaj: {woda_dzisiaj()} \n Wczoraj(Pon): Not jet \n Nd: Not jet \n Sob: Not jet \n Pt: Not jet \n Czw: Not jet \n Śr: Not jet \n ")
+    await channel.send(f"=== Zużycie Wody === \n Dzisiaj: {woda_dzisiaj()} \n Wczoraj: Not jet \n 2-dni: Not jet \n 3-dni: Not jet \n 4-dni: Not jet \n 5-dni: Not jet \n 6-dni: Not jet \n ")
 
 
 

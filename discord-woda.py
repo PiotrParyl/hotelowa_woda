@@ -69,8 +69,34 @@ def wczoraj_itd(x):
     chuj2 = chuj - water_use_h(current_time)
     return chuj2
 
-def kurwa_mac():
-    return 'kurwa mac'
+def stan_licznika():
+
+    values_list = []
+
+    db = mysql.connector.connect(
+    host='127.0.0.1',
+    user='maczo420all',
+    passwd='Pomidor13',
+    database='metryka',
+    )
+
+    mycursor = db.cursor()
+    mycursor.execute(f"SELECT value FROM woda ORDER BY ID DESC LIMIT 1")
+
+    for chuj in mycursor:
+        siema = list(chuj)
+        siema2 = list(siema[0])
+
+        
+        joined = "".join(siema2)
+
+        values_list.append(joined)
+    
+    return values_list[0]
+
+
+
+    
 
 
 
@@ -87,7 +113,12 @@ client = commands.Bot(command_prefix='!',intents=intents)
 @client.command(pass_context=True)
 async def h(ctx):
     channel = client.get_channel(1021783221475754057)
-    await channel.send(f"=== Help === \n !w - Zużycie wody \n !p - Zużycie pompy ")
+    await channel.send(f"=== Help === \n !w - Zużycie wody \n !ws - Aktualny stan licznika \n !p - Zużycie pompy ")
+
+@client.command(pass_context=True)
+async def ws(ctx):
+    channel = client.get_channel(1021783221475754057)
+    await channel.send(f"Aktualny stan licznika - {stan_licznika()}")
 
 
 

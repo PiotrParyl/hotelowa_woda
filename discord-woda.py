@@ -83,10 +83,23 @@ intents = discord.Intents.all()
 
 client = commands.Bot(command_prefix='!',intents=intents)
 
+
 @client.command(pass_context=True)
-async def r(ctx):
+async def h(ctx):
+    channel = client.get_channel(1021783221475754057)
+    await channel.send(f"=== Help === \n !w - Zużycie wody \n !p - Zużycie pompy ")
+
+
+
+@client.command(pass_context=True)
+async def w(ctx):
     channel = client.get_channel(1021783221475754057)
     await channel.send(f"=== Zużycie Wody === \n Dzisiaj: {woda_dzisiaj()} \n Wczoraj: Not jet \n 2-dni: Not jet \n 3-dni: Not jet \n 4-dni: Not jet \n 5-dni: Not jet \n 6-dni: Not jet \n ")
+
+
+
+
+
 
 
 

@@ -74,7 +74,7 @@ def kurwa_mac():
 
 
 
-token = "MTAyMTc4Mzc0NzEwMTc0MTEwNw.G1Bwj9.1YGdV1xuM3O-VUy2pyRt-rgyrl7P5g96uhQr4Q"
+token = "MTAyMTc4Mzc0NzEwMTc0MTEwNw.GVNN0E.pj6QMVse5LBb-xEQ3YIu4phBaQrgqS8qkAFF10"
 intents = discord.Intents.all()
 
 client = commands.Bot(command_prefix='!',intents=intents)

@@ -125,7 +125,7 @@ async def ws(ctx):
 @client.command(pass_context=True)
 async def w(ctx):
     channel = client.get_channel(1021783221475754057)
-    await channel.send(f"=== Zużycie Wody === \n Dzisiaj: {woda_dzisiaj()} \n Wczoraj: Not jet \n 2-dni: Not jet \n 3-dni: Not jet \n 4-dni: Not jet \n 5-dni: Not jet \n 6-dni: Not jet \n ")
+    await channel.send(f"=== Zużycie Wody === \n Dzisiaj: {woda_dzisiaj()} \n Wczoraj: {wczoraj_itd(1)} \n 2-dni: Not jet \n 3-dni: Not jet \n 4-dni: Not jet \n 5-dni: Not jet \n 6-dni: Not jet \n ")
 
 
 

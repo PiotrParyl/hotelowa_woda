@@ -19,8 +19,13 @@ def water_per_day():
     )
 
 
-    now = datetime.now()
+    mycursor = db.cursor()
 
-    print (now)
+    mycursor.execute(f"SELECT value FROM woda WHERE date = '2022-10-19'")
+
+    for chuj in mycursor:
+        print(chuj)
+
+
 
 water_per_day()

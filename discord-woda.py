@@ -115,6 +115,7 @@ async def h(ctx):
     channel = client.get_channel(1021783221475754057)
     await channel.send(f"=== Help === \n !w - Zużycie wody \n !ws - Aktualny stan licznika \n !p - Zużycie pompy ")
 
+
 @client.command(pass_context=True)
 async def ws(ctx):
     channel = client.get_channel(1021783221475754057)
@@ -125,7 +126,7 @@ async def ws(ctx):
 @client.command(pass_context=True)
 async def w(ctx):
     channel = client.get_channel(1021783221475754057)
-    await channel.send(f"=== Zużycie Wody === \n Dzisiaj: {woda_dzisiaj()} \n Wczoraj: {wczoraj_itd(1)} \n 2-dni: {wczoraj_itd(2)} \n 3-dni: {wczoraj_itd(3)} \n 4-dni: {wczoraj_itd(4)} \n 5-dni: {wczoraj_itd(5)} \n 6-dni: {wczoraj_itd(6)} \n ")
+    await channel.send(f"=== Zużycie Wody === \n Dzisiaj: {woda_dzisiaj()} \n Wczoraj:  \n 2-dni: {wczoraj_itd(2)} \n 3-dni: {wczoraj_itd(3)} \n 4-dni: {wczoraj_itd(4)} \n 5-dni: {wczoraj_itd(5)} \n 6-dni: {wczoraj_itd(6)} \n ")
 
 
 

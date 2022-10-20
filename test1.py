@@ -10,6 +10,8 @@ from datetime import datetime
 
 
 def water_per_day():
+     
+    chuj_lista = []
 
     db = mysql.connector.connect(
     host='127.0.0.1',
@@ -24,10 +26,14 @@ def water_per_day():
     mycursor.execute(f"SELECT * FROM woda WHERE date BETWEEN '2022-10-19 00:00:00' AND '2022-10-19 23:59:59'")
 
     for chuj in mycursor:
-        print(chuj[2])
+        chuj_lista.append(chuj[1])
+
+    wynik = chuj_lista[-1] - chuj_lista[0]
+
+    return wynik
 
 
 
-water_per_day()
+print(water_per_day())
 
 print('kurwiszon')

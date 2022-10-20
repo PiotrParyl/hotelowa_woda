@@ -29,3 +29,5 @@ def water_per_day():
 
 
 water_per_day()
+
+print('kurwiszon')

@@ -24,8 +24,7 @@ def water_per_day():
     mycursor.execute(f"SELECT * FROM woda WHERE date BETWEEN '2022-10-19 00:00:00' AND '2022-10-19 23:59:59'")
 
     for chuj in mycursor:
-        fiut = chuj.split('.')
-        print (fiut)
+        print(chuj[2])
 
 
 

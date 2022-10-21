@@ -26,7 +26,7 @@ def water_per_day():
     mycursor.execute(f"SELECT * FROM woda WHERE DATE(date) >= (DATE(NOW()) - INTERVAL 10 DAY)")
 
     for chuj in mycursor:
-        print(chuj)
+        print(chuj[1] +' '+ chuj[2])
 
 
 

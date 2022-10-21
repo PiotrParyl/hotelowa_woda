@@ -23,7 +23,7 @@ def water_per_day():
 
     mycursor = db.cursor()
 
-    mycursor.execute(f"SELECT * FROM woda WHERE date BETWEEN '2022-10-19 00:00:00' AND '2022-10-19 23:59:59'")
+    mycursor.execute(f"SELECT * FROM woda WHERE DATE(date) >= (DATE(NOW()) - INTERVAL 10 DAY)")
 
     for chuj in mycursor:
         chuj_lista.append(chuj[1])

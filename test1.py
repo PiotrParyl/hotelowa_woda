@@ -12,6 +12,7 @@ from datetime import datetime
 def water_per_day():
      
     chuj_lista = []
+    
 
     db = mysql.connector.connect(
     host='127.0.0.1',
@@ -31,6 +32,9 @@ def water_per_day():
         chuj_lista.append(chuj[1])
     print (len(chuj_lista))
 
+    siurek = chuj_lista[-288] - chuj_lista[-1]
+
+    print (f"Wczoraj zuzyto: {siurek} dm3")
 
 
 print(water_per_day())

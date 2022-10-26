@@ -32,6 +32,9 @@ def water_per_day():
         chuj_lista.append(chuj[1])
     print (len(chuj_lista))
 
+
+    for x in chuj_lista:
+        print(x)
      
 
     _7_dni_temu = int(chuj_lista[288]) - int(chuj_lista[0])

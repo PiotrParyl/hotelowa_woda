@@ -111,9 +111,15 @@ def water_per_day():
     _2_dni_temu = int(dzien2[287]) - int(dzien2[0])
     _1_dni_temu = int(dzien1[287]) - int(dzien1[0])
 
-    print (f" 1 dni temu: {_1_dni_temu} dm3 \n 2 dni temu: {_2_dni_temu} \n 3 dni temu: {_3_dni_temu} \n 4 dni temu: {_4_dni_temu} \n 5 dni temu: {_5_dni_temu} \n 6 dni temu: {_6_dni_temu} \n 7 dni temu: {_7_dni_temu}")
+    #print (f" 1 dni temu: {_1_dni_temu} dm3 \n 2 dni temu: {_2_dni_temu} \n 3 dni temu: {_3_dni_temu} \n 4 dni temu: {_4_dni_temu} \n 5 dni temu: {_5_dni_temu} \n 6 dni temu: {_6_dni_temu} \n 7 dni temu: {_7_dni_temu}")
+
+    return {
+    'dzin1':_1_dni_temu,
+    'dzien2':_2_dni_temu,
+    'dzien3':_3_dni_temu,
+    'dzien4':_4_dni_temu,
+    'dzien5':_5_dni_temu,
+    'dzien6':_6_dni_temu,
+    'dzien7' :_7_dni_temu}
 
 
-print(water_per_day())
-
-print('kurwiszon')

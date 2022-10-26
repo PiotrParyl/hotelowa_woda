@@ -32,7 +32,10 @@ def water_per_day():
         chuj_lista.append(chuj[1])
     print (len(chuj_lista))
 
-    siurek = float(chuj_lista[-288]) - float(chuj_lista[-1])
+    for x in chuj_lista:
+        print 
+
+    siurek = int(chuj_lista[288]) - int(chuj_lista[0])
 
     print (f"Wczoraj zuzyto: {siurek} dm3")
 

@@ -62,6 +62,9 @@ def woda_dzisiaj():
     
     return wynik
 
+def pompa_dzisiaj():
+    now = datetime.now()
+    pass
 
 
 def wczoraj_itd(x):
@@ -130,12 +133,13 @@ async def ws(ctx):
 @client.command(pass_context=True)
 async def w(ctx):
     channel = client.get_channel(1021783221475754057)
-    await channel.send(f"=== Zużycie Wody === \n Dzisiaj: {woda_dzisiaj()} \n Wczoraj: {water_per_day()['dzien1']}  \n 2-dni: {water_per_day()['dzien2']} \n 3-dni: {water_per_day()['dzien3']} \n 4-dni: {water_per_day()['dzien4']} \n 5-dni: {water_per_day()['dzien5']} \n 6-dni: {water_per_day()['dzien6']} \n ")
+    #await channel.send(f"=== Zużycie Wody === \n Dzisiaj: {woda_dzisiaj()} \n Wczoraj: {water_per_day()['dzien1']}  \n 2-dni: {water_per_day()['dzien2']} \n 3-dni: {water_per_day()['dzien3']} \n 4-dni: {water_per_day()['dzien4']} \n 5-dni: {water_per_day()['dzien5']} \n 6-dni: {water_per_day()['dzien6']} \n ")
+    await channel.send(f"Nie ma :( ")
 
 @client.command(pass_context=True)
 async def p(ctx):
     channel = client.get_channel(1021783221475754057)
-    await channel.send(f"=== Zużycie Pompy === \n Dzisiaj: error420 \n Wczoraj: {pump_per_day()['dzien1']}  \n 2-dni: {pump_per_day()['dzien2']} \n 3-dni: {pump_per_day()['dzien3']} \n 4-dni: {pump_per_day()['dzien4']} \n 5-dni: {pump_per_day()['dzien5']} \n 6-dni: {pump_per_day()['dzien6']} \n ")
+    await channel.send(f"=== Zużycie Pompy === \n Dzisiaj: {pompa_dzisiaj()} \n Wczoraj: {pump_per_day()['dzien1']}  \n 2-dni: {pump_per_day()['dzien2']} \n 3-dni: {pump_per_day()['dzien3']} \n 4-dni: {pump_per_day()['dzien4']} \n 5-dni: {pump_per_day()['dzien5']} \n 6-dni: {pump_per_day()['dzien6']} \n ")
 
 
 

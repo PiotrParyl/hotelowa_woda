@@ -218,13 +218,13 @@ def pump_per_day():
         print(x)
      
 
-    _7_dni_temu = int(dzien7[287]) - int(dzien7[0])
-    _6_dni_temu = int(dzien6[287]) - int(dzien6[0])
-    _5_dni_temu = int(dzien5[287]) - int(dzien5[0])
-    _4_dni_temu = int(dzien4[287]) - int(dzien4[0])
-    _3_dni_temu = int(dzien3[287]) - int(dzien3[0])
-    _2_dni_temu = int(dzien2[287]) - int(dzien2[0])
-    _1_dni_temu = int(dzien1[287]) - int(dzien1[0])
+    _7_dni_temu = float(dzien7[287]) - float(dzien7[0])
+    _6_dni_temu = float(dzien6[287]) - float(dzien6[0])
+    _5_dni_temu = float(dzien5[287]) - float(dzien5[0])
+    _4_dni_temu = float(dzien4[287]) - float(dzien4[0])
+    _3_dni_temu = float(dzien3[287]) - float(dzien3[0])
+    _2_dni_temu = float(dzien2[287]) - float(dzien2[0])
+    _1_dni_temu = float(dzien1[287]) - float(dzien1[0])
 
     #print (f" 1 dni temu: {_1_dni_temu} dm3 \n 2 dni temu: {_2_dni_temu} \n 3 dni temu: {_3_dni_temu} \n 4 dni temu: {_4_dni_temu} \n 5 dni temu: {_5_dni_temu} \n 6 dni temu: {_6_dni_temu} \n 7 dni temu: {_7_dni_temu}")
 

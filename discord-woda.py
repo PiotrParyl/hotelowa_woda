@@ -132,9 +132,10 @@ async def w(ctx):
     channel = client.get_channel(1021783221475754057)
     await channel.send(f"=== Zużycie Wody === \n Dzisiaj: {woda_dzisiaj()} \n Wczoraj: {water_per_day()['dzien1']}  \n 2-dni: {water_per_day()['dzien2']} \n 3-dni: {water_per_day()['dzien3']} \n 4-dni: {water_per_day()['dzien4']} \n 5-dni: {water_per_day()['dzien5']} \n 6-dni: {water_per_day()['dzien6']} \n ")
 
-
-
-
+@client.command(pass_context=True)
+async def p(ctx):
+    channel = client.get_channel(1021783221475754057)
+    await channel.send(f"=== Zużycie Pompy === \n Dzisiaj: error420 \n Wczoraj: {pump_per_day()['dzien1']}  \n 2-dni: {pump_per_day()['dzien2']} \n 3-dni: {pump_per_day()['dzien3']} \n 4-dni: {pump_per_day()['dzien4']} \n 5-dni: {pump_per_day()['dzien5']} \n 6-dni: {pump_per_day()['dzien6']} \n ")
 
 
 
